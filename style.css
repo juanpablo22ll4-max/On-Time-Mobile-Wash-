@@ -1,0 +1,368 @@
+/* =========================
+   RESET BÁSICO
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background: #0f0f0f;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* =========================
+   CONTENEDORES
+========================= */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.dark {
+  background: #141414;
+}
+
+.center {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.logo span {
+  color: #00bcd4;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: #00bcd4;
+}
+
+.btn-call {
+  background: #00bcd4;
+  color: #000;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  height: 100vh;
+  background: url("https://i.pinimg.com/736x/52/18/5a/52185a7990d2170e0e2977ff5782af18.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 16px;
+  margin-bottom: 25px;
+  color: #ddd;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: #00bcd4;
+  color: #000;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid #00bcd4;
+  color: #00bcd4;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* =========================
+   GRID
+========================= */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* =========================
+   ABOUT CARD
+========================= */
+.about-card {
+  background: #1b1b1b;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.about-card ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.about-card li {
+  margin: 10px 0;
+}
+
+/* =========================
+   SERVICES
+========================= */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #1b1b1b;
+  padding: 25px;
+  border-radius: 10px;
+  transition: 0.3s;
+  border: 1px solid transparent;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border: 1px solid #00bcd4;
+}
+
+/* =========================
+   BEFORE & AFTER
+========================= */
+
+.before-after {
+  background: #0f0f0f;
+}
+
+.subtitle {
+  text-align: center;
+  color: #bbb;
+  margin-bottom: 40px;
+}
+
+.ba-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+/* Card contenedor */
+.ba-card {
+  background: #1b1b1b;
+  border-radius: 12px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* Imagen contenedor */
+.ba-images {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Imagen */
+.ba-images img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: 0.4s ease;
+}
+
+/* Zoom hover */
+.ba-images:hover img {
+  transform: scale(1.1);
+}
+
+/* Labels */
+.label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 5px;
+  color: #000;
+}
+
+.before {
+  background: #ff4d4d;
+}
+
+.after {
+  background: #00bcd4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ba-card {
+    grid-template-columns: 1fr;
+  }
+
+  .ba-images img {
+    height: 200px;
+  }
+}
+
+/* =========================
+   GALLERY
+========================= */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   HOURS
+========================= */
+.hours-box {
+  background: #1b1b1b;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* =========================
+   FORM
+========================= */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form input,
+.form textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.form button {
+  background: #00bcd4;
+  border: none;
+  padding: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  font-size: 14px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .nav {
+    display: none;
+  }
+}
